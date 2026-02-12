@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate of Love</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .cert-container {
+            border: 10px double var(--accent);
+            padding: 40px;
+            background: white;
+            position: relative;
+            background-image: radial-gradient(#fff0f5 10%, transparent 11%), radial-gradient(#fff0f5 10%, transparent 11%);
+            background-size: 30px 30px;
+        }
+        .cert-title {
+            font-family: 'Pacifico', cursive;
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 5px;
+        }
+        .fancy-text {
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+        .names {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--text);
+            border-bottom: 2px solid var(--primary);
+            display: inline-block;
+            padding: 0 20px;
+            margin: 10px 0;
+        }
+        .signature-section {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+        .sign-line {
+            border-top: 1px solid black;
+            width: 150px;
+            padding-top: 5px;
+            font-size: 0.9rem;
+        }
+        .stamp {
+            font-size: 3rem;
+            position: absolute;
+            bottom: 20px;
+            right: 40%;
+            transform: rotate(-15deg);
+            opacity: 0.8;
+            color: #ff69b4;
+            border: 3px solid #ff69b4;
+            border-radius: 50%;
+            padding: 10px;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+        }
+    </style>
+    <style>
+    @media print {
+        /* Hide everything by default */
+        body * {
+        visibility: hidden;
+        }
+
+        /* Make body a flex container for centering */
+        body {
+        margin: 0;
+        padding: 0;
+        display: center;
+        align-items: center;      /* vertical center */
+        justify-content: center;  /* horizontal center */
+        min-height: 100vh;
+        }
+
+        /* Show only the certificate */
+        #certif, #certif * {
+        visibility: visible;
+        }
+
+        /* Let the cert keep its own size and border */
+        #certif {
+        position: static;  /* remove absolute positioning */
+        margin: 0;
+        }
+    }
+    </style>
+
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="memories.html">Our Journey</a>
+        <a href="music.html">Playlist</a>
+        <a href="bucketlist.html">Dreams</a>
+        <a href="certificate.html" class="active">Certificate</a>
+    </nav>
+
+    <div class="container" id="certif">
+        <div class="cert-container" >
+            <h1 class="cert-title">Certificate of Marriage</h1>
+            
+            <p class="fancy-text">This certifies that</p>
+            
+            <div class="names">Ahmed Aribi</div>
+            <p class="fancy-text">&</p>
+            <div class="names">Doua Bey</div>
+            
+            <p class="fancy-text">
+                Are officially bound by love, trust, and too many inside jokes.<br>
+                Valid today, tomorrow, and forever.
+            </p>
+
+            <div class="stamp">OFFICIAL</div>
+
+            <div class="signature-section">
+                <div class="sign-line">Groom's Signature 💍</div>
+                <div class="sign-line">Bride's Signature 💍</div>
+            </div>
+            
+            <br>
+            <p>Date: <span id="currentDate"></span></p>
+        </div>
+            <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWhvbW9xZmFweHNrdDltNnVxM2RuZ3VqbjdzZDM0eHB6c2Z4eHA5ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/fo7f58mV6C27UWxlLj/giphy.gif" alt="Special Gif" width="100" height="100" class="gif-container" style="position:absolute; top:7.5%; left:0%; border-radius:50%; border:3px solid var(--accent); box-shadow:0 5px 15px rgba(0,0,0,0.1);">
+        </a>
+    </div>
+    <div class="container">
+        <button onclick="window.print()" class="btn">🖨️ Print / Save as PDF</button>
+        
+    </div>
+
+    <script>
+        // Auto-fill today's date
+        document.getElementById('currentDate').innerText = new Date().toLocaleDateString();
+    </script>
+</body>
+</html>

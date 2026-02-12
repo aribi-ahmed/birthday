@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Dream List</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .checklist {
+            text-align: left;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .task {
+            background: #fff;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+        .task:hover { transform: scale(1.02); }
+        .task input {
+            margin-right: 15px;
+            accent-color: var(--accent);
+            width: 20px;
+            height: 20px;
+        }
+        .task label {
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+        /* Strikethrough animation */
+        .task input:checked + label {
+            text-decoration: line-through;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="memories.html">Our Journey</a>
+        <a href="music.html">Playlist</a>
+        <a href="bucketlist.html" class="active">Dreams</a>
+        <a href="certificate.html">Certificate</a>
+    </nav>
+
+    <div class="container" >
+        <h1>📝 Things To Do Together</h1>
+        
+        <div class="checklist">
+            
+            <div class="task">
+                <input type="checkbox" id="task1" checked>
+                <label for="task1">Fall in love (Done! ✅)</label>
+            </div>
+
+            <div class="task">
+                <input type="checkbox" id="task2" checked>
+                <label for="task2">Taste Baby's food</label>
+            </div>
+
+            <div class="task">
+                <input type="checkbox" id="task3" checked>
+                <label for="task3">Go to Disneyland (mchina l dahdah)</label>
+            </div>
+
+            <div class="task">
+                <input type="checkbox" id="task4" checked>
+                <label for="task4">Sleepover (🫣)</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task5" checked>
+                <label for="task5">Watch the sunset together</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task6">
+                <label for="task6">Cook a meal together</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task7">
+                <label for="task7">Take a road trip</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task8">
+                <label for="task8">Travel to Europe (Switzerland 🤩)</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task9">
+                <label for="task9">Adopt a kitten 🐈 (nsammiwha mimi)</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task10" checked>
+                <label for="task10">Visit a museum</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task11">
+                <label for="task11">Close the distance gap forever ✈️</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task12">
+                <label for="task12">Marry each other 👰🏻🤵🏻‍♂️</label>
+            </div>
+            <div class="task">
+                <input type="checkbox" id="task13">
+                <label for="task13">Make a baby 👶🏻 (hihihihihi)</label>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+</html>
